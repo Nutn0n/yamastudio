@@ -45,7 +45,7 @@ table {
 /* Global */
 
 body {
-  font-family: "Sukhumvit Set", sans-serif;
+  font-family: "Sukhumvit Set", "Kanit", sans-serif;
   background-color: #030303;
   color: #fff;
 	text-rendering: optimizeLegibility;
