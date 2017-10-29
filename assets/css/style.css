@@ -1,0 +1,619 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Global */
+
+body {
+  font-family: "Sukhumvit Set", sans-serif;
+  background-color: #030303;
+  color: #fff;
+	text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+	color: inherit;
+}
+
+h1,h2,h3,h4,p{
+  font-weight: 500;
+}
+
+p {
+	margin-top: 20px;
+  font-size:18px;
+  line-height: 18px;
+  opacity: 0.8;
+	line-height: 24px;
+}
+
+p a {
+	color: #fff!important;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+p a:hover {
+	color: #fafafa;
+}
+
+.special-link {
+	color:#fff;
+	opacity: 1;
+	text-decoration: underline;
+}
+
+h1 {
+  font-size: 35px;
+	font-weight: 800;
+}
+
+h2 {
+	font-size: 25px;
+	font-weight: 400;
+}
+
+/* Header */
+
+header {
+  padding: 10px 10%;
+  position: fixed;
+	width: 100%;
+	z-index: 9999999;
+  transition: .3s ease;
+}
+
+header.black {
+	background-color: #000;
+  transition: .3s ease;
+}
+
+header .logo {
+  display: inline-block;
+  width: 200px;
+  height: 60px;
+  background: url(../img/logo.svg) center no-repeat;
+  background-size: 200px;
+}
+
+header .logo:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+header .menu {
+  overflow: hidden;
+  display: inline-block;
+  position: fixed;
+  right: 10%;
+  margin-top:18px;
+}
+
+header .menu a {
+  color: #fff;
+  font-size: 18px;
+	letter-spacing: 3px;
+  padding-left: 40px;
+  font-weight: 400;
+}
+
+header .menu a:hover {
+  opacity: 0.6;
+}
+
+
+/* Slide Hero */
+
+.slide-hero-wrapper {
+  padding: 10px 10%;
+  display:block;
+  background-color: #000;
+  height: 100vh;
+	text-align: center;
+}
+
+.slide-hero-one {
+	 background-image: url(../img/hero-1.jpg);
+	 background-size: cover;
+}
+
+.slide-hero-two {
+	 background-image: url(../img/hero-2.jpg);
+}
+
+.slide-hero-three {
+	 background-image: url(../img/hero-3.jpg);
+}
+
+.slide-hero-four {
+	 background-image: url(../img/hero-4.jpg) 100%;
+}
+
+.controller {
+	width: 10px;
+	height:10px;
+	border-radius: 360px;
+	margin-left:5px;
+	margin-right:5px;
+	text-align: center;
+	display: inline-block;
+	background: #fff;
+	bottom: 0;
+	position: relative;
+	margin-top: 95vh;
+	opacity: 0.3;
+}
+
+.active {
+	opacity: 0.8;
+}
+
+.controller:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+/* Even hero */
+
+.event-hero-wrapper {
+  padding: 50px 10%;
+  min-height: 450px;
+  background: url(../img/event-hero.jpg) bottom right no-repeat;
+  background-size: 750px;
+}
+
+.event-hero-wrapper h1 {
+  margin-top:150px;
+	letter-spacing: 4px;
+}
+
+.event-hero-wrapper p {
+  margin-top:20px;
+  max-width: 350px;
+}
+
+.event {
+  margin-top: 70px;
+  display: inline-block;
+  background-color: #333;
+  width: 300px;
+  height: 150px;
+  transition: .1s ease;
+}
+
+.event:hover {
+  transform: scale(1.05);
+  transition: .1s ease;
+  box-shadow: 0 37.125px 70px -12.125px rgba(0,0,0,0.3);
+}
+
+.action-button {
+	display: inline-block;
+	background-color: #fff;
+	color: #333;
+	font-size: 20px;
+	font-weight: 600;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 30px 0 30px 0;
+	  transition: .1s ease;
+}
+
+.action-button:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+	  transition: .1s ease;
+}
+
+/*  */
+
+.feature-hero {
+  padding: 50px 10%;
+}
+
+.feature-hero h1 {
+  margin-top:150px;
+	letter-spacing: 4px;
+}
+
+.feature-hero p {
+  margin-top:50px;
+	margin-bottom: 50px;
+  max-width: 350px;
+}
+
+
+.feature-hero p .location-tag .location-icon {
+	color:#fff!important;
+}
+
+.feature-hero p.no-compress {
+  margin-top:50px;
+	margin-bottom: 50px;
+	 max-width: 70%;
+}
+
+.spacing {
+	display: block;
+	height: 100px;
+}
+
+.pricing {
+	font-family: "Sukhumvit Set", sans-serif;
+	font-size: 26px;
+	margin: 30px 0 30px 0;
+	padding:5px 10px;
+	border-radius: 10px;
+	border: 2px #fff solid;
+}
+
+/* Text Box */
+
+.text h2 {
+	margin-top: 40px;
+}
+
+.location-tag {
+	line-height: 30px;
+	font-weight: 500;
+	font-size: 20px;
+	display: block;
+}
+
+.location-tag span {
+	margin-right: 10px;
+	display: inline-block;
+	text-align: center;
+	width: 20px;
+}
+
+/* About Hero */
+
+.about-hero-wrapper {
+  padding: 10px 10%;
+  height: 100vh;
+  background: url(../img/about-hero.jpg) no-repeat left top;
+  background-size:110vh;
+}
+
+.about-hero-wrapper .text {
+	position: absolute;
+	right:10%;
+	bottom: 10%;
+	max-width: 350px;
+}
+
+/* Gear hero */
+
+.gear-hero-wrapper {
+  padding: 10px 10%;
+  height: 100vh;
+  background: url(../img/gear-hero.jpg) no-repeat;
+  background-size:cover;
+}
+
+.gear-hero-wrapper .text {
+	text-align: left;
+	position: auto;
+	padding-top:40%;
+	max-width: 350px;
+}
+
+/* Work hero */
+
+.work-hero-wrapper {
+  padding: 10px 10%;
+  min-height: 100vh;
+  background: url(../img/work-hero.jpg) center left no-repeat;
+  background-size:100vh;
+	text-align: right;
+}
+
+.work-hero-wrapper .text {
+	display: inline-block;
+	right:10%;
+	text-align: left;
+	margin-top:100px;
+	bottom: 10%;
+	max-width: 350px;
+}
+
+/* genre */
+
+.genre-hero-wrapper {
+	text-align: center;
+}
+
+.genre {
+	margin-top: 5px;
+	display: inline-block;
+	width: 24.5%;
+	height: 200px;
+	background-color: #333;
+	background-size: cover;
+  transition: .1s ease;
+}
+
+.genre:hover {
+  transform: scale(1.05);
+  transition: .1s ease;
+	 box-shadow: 0 37.125px 70px -12.125px rgba(0,0,0,0.3);
+}
+
+.drone {
+	background-image: url(../img/drone-hero.jpg);
+}
+
+.landscape {
+	background-image: url(../img/landscape-hero.jpg);
+}
+
+.portrait {
+	background-image: url(../img/portrait-hero.jpg);
+}
+
+.wedding {
+	background-image: url(../img/wedding-hero.jpg);
+}
+
+.graduation {
+	background-image: url(../img/graduation-hero.jpg);
+}
+
+.prewedding {
+	background-image: url(../img/prewedding-hero.jpg);
+}
+
+.architecture {
+	background-image: url(../img/archiecture-hero.jpg);
+}
+
+
+.product {
+	background-image: url(../img/product-hero.jpg);
+}
+
+.genre h2 {
+	margin-top: 89px;
+	text-transform: uppercase;
+}
+
+/* Social */
+
+.social-hero-wrapper {
+	padding: 200px 0;
+	text-align: center;
+}
+
+.social-hero-wrapper .social-icon {
+	margin: 50px 10px;
+}
+
+.social-icon {
+	display: inline-block;
+	text-align: center;
+	width: 65px;
+	height: 40px;
+	margin: 50px 0 0px;
+	background-repeat: no-repeat;
+}
+
+.social-icon.facebook {
+	background-image: url(../img/facebook-white.svg);
+	background-size: contain;
+}
+
+.social-icon.twitter {
+	background-image: url(../img/twitter-white.svg);
+	background-size: contain;
+}
+
+.social-icon.facebook:hover {
+	background-image: url(../img/facebook-color.svg);
+	background-size: contain;
+	cursor: pointer;
+}
+
+.social-icon.twitter:hover {
+	background-image: url(../img/twitter-color.svg);
+	background-size: contain;
+	cursor: pointer;
+}
+
+
+
+/* Footer */
+
+footer {
+	text-align: center;
+	padding: 50px;
+}
+
+footer .logo {
+	display: inline-block;
+	width: 200px;
+	height: 35px;
+	margin-bottom: -11px;
+	background-image: url(../img/logo.svg);
+	background-size: 200px;
+	background-position: center;
+}
+
+/* Layout */
+
+.grid-wrapper {
+	margin: 50px 0;;
+}
+
+.grid-center {
+	text-align: center;
+}
+
+.grid-center p {
+	text-align: center;
+	max-width: none;
+}
+
+.grid-full {
+	margin-top: 2px;
+	text-align: left;
+	display: block;
+	width: 100%;
+}
+
+.grid-half {
+	margin-top: 2px;
+	display: inline-block;
+	width: 49%;
+	height: 370px;
+	background: #333;
+}
+
+.grid-fill {
+	margin-top: 2px;
+	width: 98.5%;
+	height: 600px;
+	background: #333;
+}
+
+/* Showcase */
+
+.showcase-1 {
+	background-image: url(../img/showcase/showcase-1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+.showcase-2 {
+	background-image: url(../img/showcase/showcase-2.jpg);
+	background-size: cover;
+	background-position: bottom;
+}
+
+.showcase-3 {
+	background-image: url(../img/showcase/showcase-3.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.showcase-4 {
+	background-image: url(../img/showcase/showcase-4.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.showcase-5 {
+	background-image: url(../img/showcase/showcase-5.jpg);
+	background-size: cover;
+	background-position: bottom;
+}
+
+
+/* All About Perspective */
+
+.all-about-prespective {
+	background: url(../img/all-about-prespective.jpg);
+	background-size: cover;
+	background-position: left bottom;
+	height: 90vh;
+}
+
+/*  Responsive */
+
+@media screen and (max-width: 1000px) {
+
+	.hide-on-mobile {
+		display: none!important;
+	}
+
+	header {
+	  text-align: center;
+			padding: 0;
+	}
+
+	header .logo {
+	  text-align: center;
+	}
+
+	.about-hero-wrapper {
+	  padding: 10px 10%;
+	  background: url(../img/about-hero.jpg) no-repeat right top;
+	  background-size: 130vw;
+		text-align: left;
+	}
+
+	.gear-hero-wrapper {
+	  padding: 10px 5%;
+	}
+
+	.about-hero-wrapper {
+	  padding: 10px 5%;
+	}
+
+
+ .text {
+	  left: 5%;
+		text-align: left;
+	}
+
+	.gear-hero-wrapper .text {
+		margin-top: 50%;
+	}
+
+	.genre {
+		width: 49%;
+		height: 200px;
+	}
+
+	.grid-half {
+		margin-top: 2px;
+		display: block;
+		width: 100%;
+		height: 300px;
+	}
+
+
+}
