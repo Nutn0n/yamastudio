@@ -45,7 +45,7 @@ table {
 /* Global */
 
 body {
-  font-family: "Sukhumvit Set", "Kanit", sans-serif;
+  font-family: "Sukhumvit Set", "Prompt", sans-serif;
   background-color: #030303;
   color: #fff;
 	text-rendering: optimizeLegibility;
@@ -146,54 +146,131 @@ header .menu a:hover {
 
 /* Slide Hero */
 
+
+.loading {
+	padding-top: 30px;
+  background-color: #030303;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 600px;
+  line-height: 600px;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+
+.slider {
+  background-color: #030303;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: none;
+}
+
+.slider-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  -webkit-transition-timing-function: cubic-bezier(0.22, 1.61, 0.65, 1);
+          transition-timing-function: cubic-bezier(0.22, 1.61, 0.65, 1);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  background-visibility: hidden;
+  -webkit-transition-delay: .75s;
+          transition-delay: .75s;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-color: #f1c40f;
+  background-visibility: hidden;
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.5, 0.25, 1.25);
+          transition-timing-function: cubic-bezier(0.25, 0.5, 0.25, 1.25);
+  -webkit-transform: translateZ(0) scale(0.8, 0.8);
+          transform: translateZ(0) scale(0.8, 0.8);
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  text-align: center;
+  line-height: 600px;
+  font-size: 5rem;
+  color: white;
+}
+.slide.active {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+}
+
+/* Slider */
+
+.slide:nth-child(1) {
+  background: url(../img/hero-1.jpg);
+	background-size: cover;
+}
+.slide:nth-child(2) {
+	background: url(../img/hero-2.jpg);
+	background-size: cover;
+}
+.slide:nth-child(3) {
+	background: url(../img/hero-3.jpg);
+	background-size: cover;
+}
+.slide:nth-child(4) {
+	background: url(../img/hero-4.jpg);
+	background-size: cover;
+}
+
+.slider-nav {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 20px;
+  text-align: center;
+}
+.slider-nav > div {
+  float: left;
+  width: 10px;
+  height: 10px;
+  border: 1px solid white;
+  z-index: 2;
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: .5;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  background-color: transparent;
+}
+.slider-nav > div:hover {
+  opacity: 1;
+}
+.slider-nav > div.active {
+  background-color: white;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  opacity: 1;
+}
+
+
 .slide-hero-wrapper {
-  padding: 10px 10%;
   display:block;
-  background-color: #000;
+  background-color: #030303;
   height: 100vh;
 	text-align: center;
 }
 
-.slide-hero-one {
-	 background-image: url(../img/hero-1.jpg);
-	 background-size: cover;
-}
-
-.slide-hero-two {
-	 background-image: url(../img/hero-2.jpg);
-}
-
-.slide-hero-three {
-	 background-image: url(../img/hero-3.jpg);
-}
-
-.slide-hero-four {
-	 background-image: url(../img/hero-4.jpg) 100%;
-}
-
-.controller {
-	width: 10px;
-	height:10px;
-	border-radius: 360px;
-	margin-left:5px;
-	margin-right:5px;
-	text-align: center;
-	display: inline-block;
-	background: #fff;
-	bottom: 0;
-	position: relative;
-	margin-top: 95vh;
-	opacity: 0.3;
-}
-
-.active {
-	opacity: 0.8;
-}
-
-.controller:hover {
-	opacity: 0.8;
-	cursor: pointer;
-}
 
 /* Even hero */
 
@@ -212,15 +289,27 @@ header .menu a:hover {
 .event-hero-wrapper p {
   margin-top:20px;
   max-width: 350px;
+	margin-bottom: 30px;
 }
 
 .event {
-  margin-top: 70px;
+  margin-top: 20px;
   display: inline-block;
   background-color: #333;
   width: 300px;
   height: 150px;
   transition: .1s ease;
+	text-align: center;
+}
+
+.event h2 {
+	margin-top: 20%;
+}
+
+.allaboutprespective {
+	background:url(../img/all-about-perspective-course.jpg);
+	background-size: cover;
+	background-position: bottom;
 }
 
 .event:hover {
@@ -613,6 +702,11 @@ footer .logo {
 		display: block;
 		width: 100%;
 		height: 300px;
+	}
+
+	.work-hero-wrapper{
+		text-align: left;
+	padding: 10px 5%;	
 	}
 
 

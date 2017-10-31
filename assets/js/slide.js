@@ -1,35 +1,45 @@
-  $(".one").addClass("active");
-  $(".").addClass("slide-hero-one");
+$(document).ready(function(){
+	var slide = $(".slide");
+	var viewWidth = $(window).width();
+	var sliderInner = $(".slider-inner");
+	var childrenNo = sliderInner.children().length;
 
-var slideOne = function(){
-  $(".").removeClass("slide-hero");
-  $(".").addClass("slide-hero-one");
-  $(".one").addClass("active");
-  $(".two").removeClass("active");
-  $(".three").removeClass("active");
-  $(".four").removeClass("active");
-}
+	sliderInner.width( viewWidth * childrenNo );
 
-var slideTwo = function(){
-  $(".").addClass("slide-hero-two");
-  $(".one").removeClass("active");
-  $(".two").addClass("active");
-  $(".three").removeClass("active");
-  $(".four").removeClass("active");
-}
+	$(window).resize(function(){
+		viewWidth = $(window).width();
+	});
 
-var slideThree = function(){
-  $(".").addClass("slide-hero-three");
-  $(".one").removeClass("active");
-  $(".two").removeClass("active");
-  $(".three").addClass("active");
-  $(".four").removeClass("active");
-}
+	function setWidth(){
+		slide.each(function(){
+			$(this).width(viewWidth);
+			$(this).css("left", viewWidth * $(this).index());
+		});
+	}
 
-var slideFour = function(){
-  $(".").addClass("slide-hero-four");
-  $(".one").removeClass("active");
-  $(".two").removeClass("active");
-  $(".three").removeClass("active");
-  $(".four").addClass("active");
-}
+	function setActive(element){
+		var clickedIndex = element.index();
+
+		$(".slider-nav .active").removeClass("active");
+		element.addClass("active");
+
+		sliderInner.css("transform", "translateX(-" + clickedIndex * viewWidth + "px) translateZ(0)");
+
+		$(".slider-inner .active").removeClass("active");
+		$(".slider-inner .slide").eq(clickedIndex).addClass("active");
+	}
+
+	setWidth();
+
+	$(".slider-nav > div").on("click", function(){
+		setActive($(this));
+	});
+
+	$(window).resize(function(){
+		setWidth();
+	});
+
+	setTimeout(function(){
+		$(".slider").fadeIn(500);
+	}, 2000);
+});
