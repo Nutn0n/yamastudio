@@ -45,7 +45,7 @@ table {
 /* Global */
 
 body {
-  font-family: "Sukhumvit Set", "Prompt", sans-serif;
+  font-family: "Sukhumvit Set", sans-serif;
   background-color: #030303;
   color: #fff;
 	text-rendering: optimizeLegibility;
@@ -706,7 +706,7 @@ footer .logo {
 
 	.work-hero-wrapper{
 		text-align: left;
-	padding: 10px 5%;	
+	padding: 10px 5%;
 	}
 
 
