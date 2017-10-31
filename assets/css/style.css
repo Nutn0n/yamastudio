@@ -213,19 +213,23 @@ header .menu a:hover {
 /* Slider */
 
 .slide:nth-child(1) {
-  background: url(../img/hero-1.jpg);
+  background: url(../img/hero/hero-1.jpg);
 	background-size: cover;
 }
 .slide:nth-child(2) {
-	background: url(../img/hero-2.jpg);
+	background: url(../img/hero/hero-2.jpg);
 	background-size: cover;
 }
 .slide:nth-child(3) {
-	background: url(../img/hero-3.jpg);
+	background: url(../img/hero/hero-3.jpg);
 	background-size: cover;
 }
 .slide:nth-child(4) {
-	background: url(../img/hero-4.jpg);
+	background: url(../img/hero/hero-4.jpg);
+	background-size: cover;
+}
+.slide:nth-child(5) {
+	background: url(../img/hero/hero-5.jpg);
 	background-size: cover;
 }
 
@@ -430,14 +434,33 @@ header .menu a:hover {
 	max-width: 350px;
 }
 
+
+/* Wide hero */
+
+.wide-hero-wrapper {
+  padding: 10px 10%;
+  height: 100vh;
+  background: url(../img/wide.jpg) no-repeat;
+	background-position: center top;
+  background-size:cover;
+}
+
+.wide-hero-wrapper .text {
+	text-align: left;
+	position: auto;
+	padding-top:5%;
+	max-width: 350px;
+}
+
+
 /* Work hero */
 
 .work-hero-wrapper {
   padding: 10px 10%;
   min-height: 100vh;
   background: url(../img/work-hero.jpg) center left no-repeat;
-  background-size:100vh;
-	text-align: right;
+  background-size:cover;
+	text-align: left;
 }
 
 .work-hero-wrapper .text {
@@ -664,6 +687,29 @@ footer .logo {
 		font-weight: 400;
 	}
 
+	/* Slider */
+
+	.slide:nth-child(1) {
+	  background: url(../img/hero/hero-1-mobile.jpg);
+		background-size: cover;
+	}
+	.slide:nth-child(2) {
+		background: url(../img/hero/hero-2-mobile.jpg);
+		background-size: cover;
+	}
+	.slide:nth-child(3) {
+		background: url(../img/hero/hero-3-mobile.jpg);
+		background-size: cover;
+	}
+	.slide:nth-child(4) {
+		background: url(../img/hero/hero-4-mobile.jpg);
+		background-size: cover;
+	}
+	.slide:nth-child(5) {
+		background: url(../img/hero/hero-5-mobile.jpg);
+		background-size: cover;
+	}
+
 	.feature-hero h1 {
 		margin-top: 40px;
 	}
@@ -678,6 +724,22 @@ footer .logo {
 	  background: url(../img/event-hero.jpg) bottom right no-repeat;
 	  background-size: 750px;
 	}
+
+	.gear-hero-wrapper {
+	  padding: 10px 5%;
+	  height: auto;
+	  background: url(../img/gear-hero.jpg) no-repeat;
+	  background-size:contain;
+	}
+
+	.gear-hero-wrapper .text {
+		text-align: left;
+		position: auto;
+		padding-top:13%;
+		padding-bottom:13%;
+		max-width: 350px;
+	}
+
 
 	.hide-on-mobile {
 		display: none!important;
@@ -706,6 +768,15 @@ footer .logo {
 	.about-hero-wrapper {
 	  padding: 10px 5%;
 	}
+
+	.wide-hero-wrapper {
+	  padding: 10px 5%;
+	  height: 75vh;
+		background-color: #4B72AA;
+		background-position: bottom;
+		background-size: contain;
+	}
+
 
 
  .text {
