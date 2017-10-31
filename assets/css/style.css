@@ -46,7 +46,7 @@ table {
 
 body {
   font-family: "Sukhumvit Set", sans-serif;
-  background-color: #030303;
+  background-color: #282728;
   color: #fff;
 	text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -283,6 +283,7 @@ header .menu a:hover {
   min-height: 450px;
   background: url(../img/event-hero.jpg) bottom right no-repeat;
   background-size: 750px;
+	background-color: #030303;
 }
 
 .event-hero-wrapper h1 {
