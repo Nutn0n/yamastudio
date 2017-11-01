@@ -1,0 +1,2 @@
+
+$( ".menu" ).toggleClass( "active" )

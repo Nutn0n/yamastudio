@@ -143,6 +143,13 @@ header .menu a:hover {
   opacity: 0.6;
 }
 
+.mobile-menu-button {
+	display: none;
+}
+
+.menu a.close-menu {
+	display: none;
+}
 
 /* Slide Hero */
 
@@ -283,7 +290,7 @@ header .menu a:hover {
   min-height: 450px;
   background: url(../img/event-hero.jpg) bottom right no-repeat;
   background-size: 750px;
-	background-color: #030303;
+	background-color: #030303!important;
 }
 
 .event-hero-wrapper h1 {
@@ -716,14 +723,15 @@ footer .logo {
 	}
 
 	.event-hero-wrapper h1{
-		margin-top: 40px;
+		margin-top: 0px;
 	}
 
 	.event-hero-wrapper {
-	  padding: 0px 10%;
+	  padding: 30px 10%;
 	  min-height: 1000px;
 	  background: url(../img/event-hero.jpg) bottom right no-repeat;
 	  background-size: 750px;
+		background-color: #030303;
 	}
 
 	.gear-hero-wrapper {
@@ -836,5 +844,45 @@ footer .logo {
 		 max-width: 100%;
 	}
 
+	.grid-fill {
+		margin-top: 2px;
+		width: 99.9%;
+		height: 300px;
+	}
+
+	.mobile-menu-button {
+		display: inline-block;
+		position: fixed;
+		left: 5%;
+		top:16px;
+		padding: 5px;
+		border: 1px #fff solid;
+		border-radius: 5px;
+	}
+
+	.mobile-menu-button:hover {
+		opacity: 0.7;
+		cursor: pointer;
+	}
+
+.menu {
+	text-align: center;
+	position: fixed;
+	background-color: black;
+	width: 110%;
+	left: -10%;
+	bottom: 0;
+	padding: 30px 0 30px 0;
+}
+
+.menu a {
+	display: block;
+	line-height: 40px;
+	text-align: center;
+}
+
+.menu a.close-menu {
+	display: inline-block;
+}
 
 }
