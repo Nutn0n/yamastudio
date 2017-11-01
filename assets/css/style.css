@@ -137,18 +137,20 @@ header .menu a {
 	letter-spacing: 3px;
   padding-left: 40px;
   font-weight: 400;
+	display: inline-block;
 }
 
 header .menu a:hover {
   opacity: 0.6;
 }
 
+
 .mobile-menu-button {
 	display: none;
 }
 
-.menu a.close-menu {
-	display: none;
+.menu .close-menu {
+	display: none!important;
 }
 
 /* Slide Hero */
@@ -876,20 +878,18 @@ footer .logo {
 	bottom: 0;
 	padding: 30px 0 30px 0;
 	-webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition:  all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  transition:  all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .menu a {
-	display: block;
+	display: block!important;
 	line-height: 40px;
 	text-align: center;
 }
 
 .menu a.close-menu {
-	display: inline-block;
+	display: inline-block!important;
 }
-
-
 
 header .unactive {
 	transform: translateY(100%);
