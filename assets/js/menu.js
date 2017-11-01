@@ -1,2 +1,11 @@
+var menuTrigger = function() {
+$( ".menu" ).toggleClass( "unactive" );
+}
 
-$( ".menu" ).toggleClass( "active" )
+var removeMenu = function(){
+  $(".menu").addClass("unactive");
+}
+
+$(window).scroll(function() {
+        $(".menu").addClass("unactive");
+});
