@@ -460,6 +460,7 @@ header .menu a:hover {
   padding: 10px 10%;
   height: 100vh;
   background: url(../img/about-hero.jpg) no-repeat left top;
+	background-color: #000;
   background-size:110vh;
 }
 
