@@ -12,9 +12,11 @@
   <body>
 
     <header>
+      <span onclick="menuTrigger();" class="mobile-menu-button">MENU</span>
       <a href="https://yamakunz.com"><div class="logo"></div>
     </a>
-      <div class="menu hide-on-mobile">
+      <div class="menu unactive">
+        <a class="close-menu" onclick="removeMenu()"><span class="ion-ios-close-outline"></span></a>
         <a href="https://yamakunz.com/#feature">Feature</a>
         <a href="https://yamakunz.com/gallary">Gallary</a>
         <a href="https://yamakunz.com/newsroom">Newsroom</a>
@@ -92,17 +94,17 @@
         <h2>อุปกรณ์ที่ต้องนำมา</h2>
         <p class="no-compress">
         <span class="location-tag">
-          <span class="location-icon ion-ios-camera-outline"></span>กล้อง DSLR หรือ Mirrorless ไม่จำกัดค่าย
+          <span class="location-icon ion-ios-camera-outline"></span><span class="location-text">กล้อง DSLR หรือ Mirrorless ไม่จำกัดค่าย</span>
         </span>
         <span class="location-tag">
-          <span class="location-icon ion-ios-grid-view-outline"></span>เลนส์มุมกว้างที่ให้มิติตรง ไม่จำเป็นต้องมี Tilt-Shift และไม่ควรเป็น Fisheye
+          <span class="location-icon ion-ios-grid-view-outline"></span><span class="location-text">เลนส์มุมกว้างที่ให้มิติตรง ไม่จำเป็นต้องมี Tilt-Shift และไม่ควรเป็น Fisheye    </span>
         </span>
         <span class="location-tag">
-          <span class="location-icon ion-qr-scanner"></span>ขาตั้งกล้องทั่วไป
+          <span class="location-icon ion-qr-scanner"></span><span class="location-text">ขาตั้งกล้องทั่วไป    </span>
         </span>
         <span class="location-tag">
-          <span class="location-icon ion-laptop"></span>คอมพิวเตอร์พกพา
-macOS/Windows ที่ลง Adobe Ps + Lr เวอร์ชั่นล่าสุดแล้ว
+          <span class="location-icon ion-laptop"></span><span class="location-text">คอมพิวเตอร์พกพา
+macOS/Windows ที่ลง Adobe Ps + Lr เวอร์ชั่นล่าสุดแล้ว    </span>
         </span>
       </p>
 
@@ -124,19 +126,48 @@ macOS/Windows ที่ลง Adobe Ps + Lr เวอร์ชั่นล่า
 
       <div class="grid-center">
 
-      <h1>ลงทะเบียน</h1>
-      <p>ลงทะเบียนเรียนคอร์สในวันที่ 14 มกราคม 2018 <br/>หรือหากต้องการติดต่อคอร์ส All About Perspective แบบ OnDemand <br/>สามารถ <a class="special-link" href="#">ติดต่อได้</a> เพื่อนัดวันและเวลา (ผู้เรียน 10-20 คน)</p>
-      <span class="pricing">
+      <h1>Register</h1>
+      <p class="perspective-info">ลงทะเบียนเรียนคอร์สในวันที่ 14 มกราคม 2018 หรือหากต้องการติดต่อคอร์ส All About Perspective แบบ OnDemand สามารถ <a class="special-link" href="#">ติดต่อได้</a> เพื่อนัดวันและเวลา (ผู้เรียน 10-20 คน)</p>
+
+      <div class="pricing">
+        <div class="pricing-head">All About Perspective  <span style="font-weight:200;">Course</div>
+        <div class="pricing-info">
+            <li>Basic of Perspective</li>
+            <li>Equipment and Setting</li>
+            <li>Workshop</li>
+            <li>Perspective Correction in Software</li>
+        </div>
+        <div class="pricing-big-data">Up to 20 Persons / 2nd Generation : Sunday 14th January, 2018</div>
         3,990 บาท
-      </span>
+        <br/>
+        <a href="#">
+        <div class="action-button">
+          ลงทะเบียน
+        </div>
+      </a>
+      </div>
+
+      <div class="pricing">
+        <div class="pricing-head">All About Perspective <span style="font-weight:200;">OnDemand</div>
+        <div class="pricing-info">
+            <li>Basic of Perspective</li>
+            <li>Equipment and Setting</li>
+            <li>Workshop</li>
+            <li>Perspective Correction in Software</li>
+        </div>
+        <div class="pricing-big-data">From 10 to 20 Persons / Custom Date Privately </div>
+        3,990 บาท
+        <br/>
+        <a href="#">
+        <div class="action-button-trans">
+          ติดต่อเรา
+        </div>
+      </a>
+      </div>
 
       <div class="spacing"></div>
 
-      <a href="#">
-      <div class="action-button">
-        ลงทะเบียน
-      </div>
-    </a>
+
 
     </div>
 
@@ -148,6 +179,6 @@ macOS/Windows ที่ลง Adobe Ps + Lr เวอร์ชั่นล่า
 
     <script src="../assets/js/jq.min.js"></script>
     <script src="../assets/js/header.js"></script>
-
+    <script src="../assets/js/menu.js"></script>
   </body>
 </html>

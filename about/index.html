@@ -5,15 +5,18 @@
     <meta charset="utf-8">
     <title>Yama Studio - About me</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   </head>
   <body>
 
     <header class="black">
+      <span onclick="menuTrigger();" class="mobile-menu-button">MENU</span>
       <a href="https://yamakunz.com"><div class="logo"></div>
     </a>
-      <div class="menu hide-on-mobile">
+      <div class="menu unactive">
+        <a class="close-menu" onclick="removeMenu()"><span class="ion-ios-close-outline"></span></a>
         <a href="https://yamakunz.com/#feature">Feature</a>
         <a href="https://yamakunz.com/gallary">Gallary</a>
         <a href="https://yamakunz.com/newsroom">Newsroom</a>
@@ -102,6 +105,8 @@ Travel the world to capture the memories perspectively clear.</p>
     </footer>
 
     <script src="../assets/js/jq.min.js"></script>
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/menu.js"></script>
 
   </body>
 </html>
